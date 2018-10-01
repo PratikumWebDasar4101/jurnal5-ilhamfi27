@@ -10,13 +10,18 @@ if (isset($_POST['submit'])) {
 	$nama 	= isset($_POST['nama']) ? $_POST['nama'] : "";
 	$email 	= isset($_POST['email']) ? $_POST['email'] : "";
 	//=========================================================================================================
-	$new_data = array(
-				'nim' 	=> $nim,
-				'nama' 	=> $nama,
-				'email' => $email
-			);
-	array_push($data_mhs, $new_data);
-	$_SESSION['data_mhs'] = $data_mhs;
+	if(!is_numeric($nim)){
+		$_SESSION['pesan_error'] = "NIM Harus Angka";
+		header('location: registrasi.php');
+	} else {
+		$new_data = array(
+					'nim' 	=> $nim,
+					'nama' 	=> $nama,
+					'email' => $email
+				);
+		array_push($data_mhs, $new_data);
+		$_SESSION['data_mhs'] = $data_mhs;
+	}
 }
 ?>
 <table>

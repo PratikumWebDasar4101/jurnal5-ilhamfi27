@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (isset($_SESSION['pesan_error'])) {
+	echo $_SESSION['pesan_error'];
+	unset($_SESSION['pesan_error']);
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
