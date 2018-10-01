@@ -32,6 +32,8 @@ if (isset($_POST['submit'])) {
 		echo "Komentar Anda Harus Lebih Dari 5 Kata!";
 	} else {
 		echo "Komentar anda : <br>" . $komentar;
+		echo "<br>";
+		echo "Jumlah Kata : " . count($data);
 	}
 }
 ?>
