@@ -4,7 +4,7 @@
 		<title>Form Registrasi</title>
 	</head>
 	<body>
-		<form action="prosesregis.php">
+		<form action="prosesregis.php" method="POST">
 			<table>
 				<tr>
 					<td>NIM</td>
